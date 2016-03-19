@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Basic Bootstrap Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <!-- FONT AWESOME LIBRARY -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- CSS FILE LINK -->
+    <link rel="stylesheet" href="prism.css">
+    <style>
+    iframe {
+        width: 100%;
+        height: 400px;
+    }
+    
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- CODE BELOW -->
+    <div class="container">
+        <!-- Template -->
+        <div id="test-accordion" class="panel-group">
+            <div class="panel panel-default">
+                <!-- Main Title -->
+                <div id="test-title" class="panel-heading">
+                    <a href="#test" data-toggle="collapse">
+                        <h1 class="panel-title">Panel-Title</h1>
+                    </a>
+                </div>
+                <!-- Body Content -->
+                <div id='test' class="panel-collapse collapse">
+                    <!-- Sub Content 1 -->
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <!-- Sub Title -->
+                            <div id="test-syntax-title" class="panel-heading">
+                                <a href="#test-syntax" data-toggle="collapse">
+                                    <h1 class="panel-title">Syntax</h1>
+                                </a>
+                            </div>
+                            <!-- Sub Body -->
+                            <div id='test-syntax' class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <h1>Body 1</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sub Content 2 -->
+                        <div class="panel panel-default">
+                            <!-- Sub Title -->
+                            <div id="test-parameter-title" class="panel-heading">
+                                <a href="#test-param" data-toggle="collapse">
+                                    <h1 class="panel-title">Paramaters</h1>
+                                </a>
+                            </div>
+                            <!-- Sub Body -->
+                            <div id='test-param' class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <h1>Body 2</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Border Accordion -->
+        <div id="border-accordion" class="panel-group">
+            <div class="panel panel-default">
+                <!-- Main Title -->
+                <div id="border-title" class="panel-heading">
+                    <a href="#border-body" data-toggle="collapse">
+                        <h1 class="panel-title">Border</h1>
+                    </a>
+                </div>
+                <!-- Body Content -->
+                <div id="border-body" class="panel-collapse collapse">
+                    <!-- Sub Content 1 -->
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <!-- Sub Title -->
+                            <div id="border-syntax-title" class="panel-heading">
+                                <a href="#border-syntax" data-toggle="collapse">
+                                    <h1 class="panel-title">Syntax</h1>
+                                </a>
+                            </div>
+                            <!-- Sub Body -->
+                            <div id='border-syntax' class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <pre><code class="language-markup">&lt;br-width> || &lt;br-style> || &lt;color></code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sub Content 2 -->
+                        <div class="panel panel-default">
+                            <!-- Sub Title -->
+                            <div id="border-parameter-title" class="panel-heading">
+                                <a href="#border-param" data-toggle="collapse">
+                                    <h1 class="panel-title">Paramaters</h1>
+                                </a>
+                            </div>
+                            <!-- Sub Body -->
+                            <div id='border-param' class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <pre>
+                                    <code class="language-markup">&lt;br-width> {1,4} = &lt;length> | thin | medium | thick
+                                    &lt;br-style> = none | hidden | dotted | dashed |solid |double | groove | ridge |inset | outset</code></pre>
+                                    <dd>
+                                        <table class="standard-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="vertical-align: middle;"><code>none</code></td>
+                                                    <td style="vertical-align: middle;">
+                                                        <div style="border-width: 3px; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;">&nbsp;</div>
+                                                    </td>
+                                                    <td style="vertical-align: middle;">Like for the <code>hidden</code> keyword, displays no border. In that case, except if a background image is set, the calculated values of <a href="/en-US/docs/Web/CSS/border-width" title="The border-width property sets the width of the border of a box. Using the shorthand property border is often more convenient."><code>border-width</code></a> will be <code>0</code>, even if specified otherwise through the property. In case of table cell and border collapsing, the <code>none</code> value has the lowest priority: it means that if any other conflicting border is set, it will be displayed.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="vertical-align: middle;"><code>hidden</code></td>
+                                                    <td style="vertical-align: middle;">
+                                                        <div style="border-width: 3px; border-style: hidden; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;">&nbsp;</div>
+                                                    </td>
+                                                    <td style="vertical-align: middle;">Like for the <code>none</code> keyword, displays no border. In that case, except if a background image is set, the calculated values of <a href="/en-US/docs/Web/CSS/border-width" title="The border-width property sets the width of the border of a box. Using the shorthand property border is often more convenient."><code>border-width</code></a> will be <code>0</code>, even if specified otherwise through the property. In case of table cell and border collapsing, the <code>hidden</code> value has the highest priority: it means that if any other conflicting border is set, it won't be displayed.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="vertical-align: middle;"><code>dotted</code></td>
+                                                    <td style="vertical-align: middle;">
+                                                        <div style="border-width: 3px; border-style: dotted; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;">&nbsp;</div>
+                                                    </td>
+                                                    <td style="vertical-align: middle;">Displays a series of rounded dots. The spacing of the dots is not defined by the specification and is implementation-specific. The radius of the dots is half the calculated <a href="/en-US/docs/Web/CSS/border-width" title="The border-width property sets the width of the border of a box. Using the shorthand property border is often more convenient."><code>border-width</code></a>.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="vertical-align: middle;"><code>dashed</code></td>
+                                                    <td style="vertical-align: middle;">
+                                                        <div style="border-width: 3px; border-style: dashed; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;">&nbsp;</div>
+                                                    </td>
+                                                    <td style="vertical-align: middle;">Displays a series of short square-ended dashes or line segments. The exact size and length of the segments are not defined by the specification and are implementation-specific.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="vertical-align: middle;"><code>solid</code></td>
+                                                    <td style="vertical-align: middle;">
+                                                        <div style="border-width: 3px; border-style: solid; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;">&nbsp;</div>
+                                                    </td>
+                                                    <td style="vertical-align: middle;">Displays a single, straight, solid line.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="vertical-align: middle;"><code>double</code></td>
+                                                    <td style="vertical-align: middle;">
+                                                        <div style="border-width: 3px; border-style: double; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;">&nbsp;</div>
+                                                    </td>
+                                                    <td style="vertical-align: middle;">Displays two straight lines that add up to the pixel amount defined as <a href="/en-US/docs/Web/CSS/border-width" title="The border-width property sets the width of the border of a box. Using the shorthand property border is often more convenient."><code>border-width</code></a> .</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="vertical-align: middle;"><code>groove</code></td>
+                                                    <td style="vertical-align: middle;">
+                                                        <div style="border-width: 3px; border-style: groove; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;">&nbsp;</div>
+                                                    </td>
+                                                    <td style="vertical-align: middle;">Displays a border leading to a carved effect. It is the opposite of <code>ridge</code>.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="vertical-align: middle;"><code>ridge</code></td>
+                                                    <td style="vertical-align: middle;">
+                                                        <div style="border-width: 3px; border-style: ridge; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;">&nbsp;</div>
+                                                    </td>
+                                                    <td style="vertical-align: middle;">Displays a border with a 3D effect, like if it is coming out of the page. It is the opposite of <code>groove</code>.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="vertical-align: middle;"><code>inset</code></td>
+                                                    <td style="vertical-align: middle;">
+                                                        <div style="border-width: 3px; border-style: inset; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;">&nbsp;</div>
+                                                    </td>
+                                                    <td style="vertical-align: middle;">Displays a border that makes the box appear embedded. It is the opposite of <code>outset</code>. When applied to a table cell with <a href="/en-US/docs/Web/CSS/border-collapse" title="The border-collapse CSS property determines whether a table's borders are separated or collapsed. In the separated model, adjacent cells each have their own distinct borders. In the collapsed model, adjacent table cells share borders."><code>border-collapse</code></a> set to <code>collapsed</code>, this value behaves like <code>groove</code>.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="vertical-align: middle;"><code>outset</code></td>
+                                                    <td style="vertical-align: middle;">
+                                                        <div style="border-width: 3px; border-style: outset; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;">&nbsp;</div>
+                                                    </td>
+                                                    <td style="vertical-align: middle;">
+                                                        <p>Displays a border that makes the box appear in 3D, embossed. It is the opposite of <code>inset</code>. When applied to a table cell with <a href="/en-US/docs/Web/CSS/border-collapse" title="The border-collapse CSS property determines whether a table's borders are separated or collapsed. In the separated model, adjacent cells each have their own distinct borders. In the collapsed model, adjacent table cells share borders."><code>border-collapse</code></a> set to <code>collapsed</code>, this value behaves like <code>ridge</code>.</p>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </dd>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MDN Syntax Accordion -->
+        <div id="mdn-syntax" class="panel panel-default">
+            <!-- MDN Title -->
+            <div class="panel-heading" id="mdn-title">
+                <a href="#mdn-body" data-toggle="collapse" data-parent="#accordion">
+                    <h1 class="panel-title">MDN Syntax</h1>
+                </a>
+            </div>
+            <!-- MDN Body -->
+            <div id="mdn-body" class="panel-collapse collapse ">
+                <div class="panel-body">
+                    <table class="standard-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Sign</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th colspan="4">Combinators</th>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>Juxtaposition</td>
+                                <td>Components are mandatory and should appear in that order</td>
+                                <td><code>solid &lt;length&gt;</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>&amp;&amp;</code></td>
+                                <td>Double ampersand</td>
+                                <td>Components are mandatory but may appear in any order</td>
+                                <td><code>&lt;length&gt; &amp;&amp; &lt;string&gt;</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>||</code></td>
+                                <td>Double bar</td>
+                                <td>At least one of the components must be present, and they may appear in any order.</td>
+                                <td><code>&lt;'border-image-outset'&gt; || &lt;'border-image-slice'&gt;</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>|</code></td>
+                                <td>Single bar</td>
+                                <td>Exactly one of the components must be present</td>
+                                <td><code>smaller | small | normal | big | bigger</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>[ ]</code></td>
+                                <td>Brackets</td>
+                                <td>Group components to bypass precedence rules</td>
+                                <td><code>bold [ thin &amp;&amp; &lt;length&gt; ]</code></td>
+                            </tr>
+                            <tr>
+                                <th colspan="4">Multipliers</th>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>No multiplier</td>
+                                <td>Exactly 1 times</td>
+                                <td><code>solid</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>*</code></td>
+                                <td>Asterisk</td>
+                                <td>0 or more times</td>
+                                <td><code>bold smaller*</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>+</code></td>
+                                <td>Plus sign</td>
+                                <td>1 or more times</td>
+                                <td><code>bold smaller+</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>?</code></td>
+                                <td>Question mark</td>
+                                <td>0 or 1 time (that is <em>optional)</em></td>
+                                <td><code>bold smaller?</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>{A,B}</code></td>
+                                <td>Curly braces</td>
+                                <td>At least <code>A</code> times, at most <code>B</code> times</td>
+                                <td><code>bold smaller{1,3}</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>#</code></td>
+                                <td>Hash mark</td>
+                                <td>1 or more times, but each occurrence separated by a comma ('<code>,</code>')</td>
+                                <td><code>bold smaller#</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Background Accordion -->
+        <div id="bg-accordion" class="background panel-group">
+            <!-- Panel Title -->
+            <div class="panel panel-default">
+                <div class="panel-heading" id="bg-title">
+                    <a data-toggle="collapse" data-parent="#bg-accordion" href="#bg-content">
+                        <h1 class="panel-title">Background</h1>
+                    </a>
+                </div>
+                <!-- Panel Body of Background -->
+                <div id="bg-content" class="panel-collapse collapse ">
+                    <div class="panel-body">
+                        <!-- Nested Syntax Panel Group -->
+                        <div class="panel panel-default">
+                            <!-- Syntax Title -->
+                            <div class="panel-heading">
+                                <!-- HReference body to be collapsed -->
+                                <a data-toggle="collapse" data-parent="#bg-title" href="#bg-syntax">
+                                    <h2 class="panel-title">Syntax</h2>
+                                </a>
+                            </div>
+                            <!-- Syntax Body -->
+                            <div id="bg-syntax" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <pre><code class="language-markup">background: &lt;bg-img> || &lt;position> || &lt;bg-size> || &lt;bg-repeat> || &lt;bg-attachment> || &lt;bg-clip> {1,2} || &lt;bg-color></code></pre>
+                                    <p>Notes: Order doesn't matter</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Nested Parameter Panel Group -->
+                        <div class="panel panel-default">
+                            <!-- Parameter Title -->
+                            <div class="panel-heading">
+                                <!-- HReference body to be collapsed -->
+                                <a data-toggle="collapse" data-parent="#bg-title" href="#bg-parameter">
+                                    <!-- Parameters -->
+                                    <h3 class="panel-title">Parameters</h3>
+                                </a>
+                            </div>
+                            <!-- Parameter Body -->
+                            <div id="bg-parameter" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <!-- Background-Image -->
+                                    <h4><b>bg-img</b>:<pre><code class="language-markup">none | &lt;image></code></pre></h4>
+                                    <p>Note: url (' link ');</p>
+                                    <hr>
+                                    <!-- Position -->
+                                    <h4><b>position</b><pre><code class="language-markup"> top | bottom | left | right | center [&lt;length> | &lt;percentage>]{1,2} (x,y? coords. (0,0) is top-left)</code></pre></h4>
+                                    <p>Note: if only x is provided, y is set to'center'</p>
+                                    <p>Can specify offset from pre-determined keyword, positive offset values are towards right and bottom</p>
+                                    <p>Ex: top 50% bottom 50px = offset 'top' 50% to right, offset 'left' down 50px</p>
+                                    <p>Ex: 50% 50% = 50 percent to the right, 50 percent down (ie: center)</p>
+                                    <hr>
+                                    <!-- Background-size -->
+                                    <h4><b>bg-size</b>:<pre><code class="language-markup">[ &lt;length> | &lt;percentage> | &lt;auto> ] {1,2} (width,height?) | cover | contain</code></pre></h4>
+                                    <p>Note: if only width is provided, height is set to auto. 'Contain' scales with screen size. 'Cover maintains size' </p>
+                                    <p>Open in full screen and resize window to see difference: <a href="http://whereswalden.com/files/mozilla/background-size/page-cover.html">Cover Example</a> ||
+                                        <a href="http://whereswalden.com/files/mozilla/background-size/page-contain.html">Contain Example</a></p>
+                                    <hr>
+                                    <!-- Background-repeat -->
+                                    <h4><b>bg-repeat</b>:<pre><code class="language-markup">repeat-x | repeat-y | [repeat | space | round | no-repeat]{1,2} (horizontal,vertical?)</code></pre></h4>
+                                    <p>Note: if</p>
+                                    <p>'Space': repeat image without clipping</p>
+                                    <p>'Round': image stretches until there is enough room to add another image, current images will compress to allow room for newly inserted image. resize jsbin output window to see effect.</p>
+                                    <p>'Repeat': equivalent to (repeat, repeat) </p>
+                                    <hr>
+                                    <!-- Background-attachment -->
+                                    <h4><b>bg-attachment</b>: <pre><code class="language-markup">scroll | fixed | local</code></pre></h4>
+                                    <p>'Scroll': attached to viewport and element (fixed to browser's window, and scrolls inside containing element)</p>
+                                    <p>'Fixed': attached to viewport (fixed to browser's window, and fixed to containing element)</p>
+                                    <p>'Local': attached to element (scrolls with browser's window, and scrolls inside containing element</p>
+                                    <a href="http://people.opera.com/pepelsbey/experiments/bga/">bg-attachment Examples</a>
+                                    <hr>
+                                    <!-- Background-clip -->
+                                    <h4><b>bg-clip</b>:<pre><code class="language-markup">border-box | padding-box | content-box</code></pre></h4>
+                                    <p>'Border-box': background extends to border (but underneath in z-order)</p>
+                                    <p>'Padding-box': background extends to padding</p>
+                                    <p>'Content-box': background extends to content</p>
+                                    <hr>
+                                    <!-- Background-color -->
+                                    <h4><b>bg-color</b>: <pre>rgba | #FFFFFF</pre></h4>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Background Playground Group -->
+                        <div class="panel panel-default">
+                            <!-- Playground Title -->
+                            <div class="panel-heading">
+                                <a data-toggle="collapse" data-parent="#bg-title" href="#bg-playground">
+                                    <h2 class="panel-title">Background Playground</h2>
+                                </a>
+                            </div>
+                            <!-- Playground Body -->
+                            <div id="bg-playground" class="panel-collapse collpase in">
+                                <div class="panel-body">
+                                    <iframe src="http://localhost:3000/cut/9/edit?css,output"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Font Accordion -->
+        <div id="font-accordion" class="Font panel-group">
+            <!-- Panel Title -->
+            <div class="panel panel-default">
+                <div class="panel-heading" id="font-title">
+                    <a data-toggle="collapse" data-parent="#font-accordion" href="#font-content">
+                        <h1 class="panel-title">Font</h1>
+                    </a>
+                </div>
+                <!-- Panel Body of Font -->
+                <div id="font-content" class="panel-collapse collapse ">
+                    <div class="panel-body">
+                        <!-- Nested Syntax Panel Group -->
+                        <div class="panel panel-default">
+                            <!-- Syntax Title -->
+                            <div class="panel-heading">
+                                <!-- HReference body to be collapsed -->
+                                <a data-toggle="collapse" data-parent="#font-title" href="#font-syntax">
+                                    <h2 class="panel-title">Syntax</h2>
+                                </a>
+                            </div>
+                            <!-- Syntax Body -->
+                            <div id="font-syntax" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <pre>
+                                            <code class="language-markup">font: [
+                                            [&lt;font-style> || &lt;font-weight> || &lt;font-stretch>]? 
+                                            &lt;font-size> [ / &lt;line-height>]? &lt;font-family> 
+                                            ] 
+                                            | caption | icon | menu |message-box | small-caption | status-bar</code></pre>
+                                    <p>Notes: Order doesn't matter</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Nested Parameter Panel Group -->
+                        <div class="panel panel-default">
+                            <!-- Parameter Title -->
+                            <div class="panel-heading">
+                                <!-- HReference body to be collapsed -->
+                                <a data-toggle="collapse" data-parent="#bg-title" href="#font-parameter">
+                                    <!-- Parameters -->
+                                    <h3 class="panel-title">Parameters</h3>
+                                </a>
+                            </div>
+                            <!-- Parameter Body -->
+                            <div id="font-parameter" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <!-- Font-style -->
+                                    <h4><b>font-style</b>:<pre><code class="language-markup">normal | italic | oblique </code></pre></h4>
+                                    <a href="http://stackoverflow.com/questions/1680624/font-style-italic-vs-oblique-in-css">italic vs oblique</a>
+                                    <!-- Font-weight -->
+                                    <h4><b>font-weight</b><pre><code class="language-markup">normal | bold | bolder | lighter | 100 | 200 | 300 |400 | 500 | 600 | 700 | 800 | 900</code></pre></h4>
+                                    <p>Note: lighter / bolder relative to parent</p>
+                                    <!-- Font-stretch -->
+                                    <h4><b>font-stretch</b>:<pre><code class="language-markup">normal | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded</code></h4></pre>
+                                    <iframe src="http://localhost:3000/vav/1/edit?css,output"></iframe>
+                                    <hr>
+                                    <!-- Font-size -->
+                                    <h4><b>font-size</b>:<pre><code class="language-markup">&lt;absolute-size> | &lt;relative-size> | &lt;length> | &lt;percentage></code></pre></h4>
+                                    <p>'Absolute Size': xx-small| s-small | small | medium | large | x-large | xx-large</p>
+                                    <p>'Relative Size': larger | smaller</p>
+                                    <hr>
+                                    <!-- Line-height -->
+                                    <h4><b>line-height</b>: <pre><code class="language-markup">normal | &lt;number> | &lt;length | &lt;percentage></code></pre></h4>
+                                    <p>'Number': no units, equal to number multiplied by element's font size</p>
+                                    <p>Prefer using 'numbers' for line-height values due to possible errors from inheritance, example below shows why</p>
+                                    <p>Green box: line-height calculated from own font-size (30px * 1.1 = 33px)</p>
+                                    <p>Red box: line-height calculated from .box font-size (15px * 1.1 = 16.5px) </p>
+                                    <iframe src="http://localhost:3000/tis/1/edit?css,output"></iframe>
+                                    <!-- Font-family -->
+                                    <h4><b>font-family</b>:<pre><code class="language-markup">[ &lt;family-name> | &lt;generic-family> ]</code></pre></h4>
+                                    <p>Generic names must NOT be in quotes</p>
+                                    <p>Ordered highest to lowest priority</p>
+                                    <p>'Generic-family': serif | sans-serif | cursive | san-serif | cursive | fantasy | monospace</p>
+                                    <h4><b>Keywords</b></h4>
+                                    <iframe src="http://localhost:3000/riv/2/edit?css,output"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- List-style Accordion -->
+        <div id="list-style-accordion" class="list-style panel-group">
+            <!-- Panel Title -->
+            <div class="panel panel-default">
+                <div class="panel-heading" id="list-title">
+                    <a data-toggle="collapse" data-parent="#list-style-accordion" href="#list-content">
+                        <h1 class="panel-title">List-Style</h1>
+                    </a>
+                </div>
+                <!-- Panel Body of Background -->
+                <div id="list-content" class="panel-collapse collapse ">
+                    <div class="panel-body">
+                        <!-- Nested Syntax Panel Group -->
+                        <div class="panel panel-default">
+                            <!-- Syntax Title -->
+                            <div class="panel-heading">
+                                <!-- HReference body to be collapsed -->
+                                <a data-toggle="collapse" data-parent="#bg-title" href="#list-syntax">
+                                    <h2 class="panel-title">Syntax</h2>
+                                </a>
+                            </div>
+                            <!-- Syntax Body -->
+                            <div id="list-syntax" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <pre><code class="language-markup">list-style: &lt;list-style-type> || &lt;list-style-position> || &lt;list-style-image></code></pre>
+                                    <p>Notes: Order doesn't matter</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Nested Parameter Panel Group -->
+                        <div class="panel panel-default">
+                            <!-- Parameter Title -->
+                            <div class="panel-heading">
+                                <!-- HReference body to be collapsed -->
+                                <a data-toggle="collapse" data-parent="#list-title" href="#list-parameter">
+                                    <!-- Parameters -->
+                                    <h3 class="panel-title">Parameters</h3>
+                                </a>
+                            </div>
+                            <!-- Parameter Body -->
+                            <div id="list-parameter" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <!-- List-style Types -->
+                                    <h4><b>list-style-type</b>:<pre><code class="language-markup">&lt;counter-style> | &lt;string> | none</code></pre></h4>
+                                    <p><code>&lt;counter-style> = &lt;counter-style-name> | symbols()</code></p>
+                                    <p><code>&lt;counter-style-name> = &lt;custom-indent></code></p>
+                                    <iframe src="http://localhost:3000/rof/1/edit?css,output"></iframe>
+                                    <hr>
+                                    <!-- List-style Position -->
+                                    <h4><b>list-style-position</b><pre><code class="language-markup"> inside | outside</code></pre></h4>
+                                    <p>Specifies if marker is inside or outside block box</p>
+                                    <iframe src="http://localhost:3000/dof/1/edit?css,output" frameborder="0"></iframe>
+                                    <hr>
+                                    <!-- List-style Image -->
+                                    <h4><b>list-style-image</b>:<pre><code class="language-markup">&lt;url> | none</code></pre></h4>
+                                    <p>Image used as list marker if provided</p>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Border-radius Accordion -->
+        <div id="br-accordion" class="panel-group">
+            <div class="panel panel-default">
+                <!-- Main Title -->
+                <div class="panel-heading" id="br-title">
+                    <a href="#border-radius-body" data-toggle="collapse" data-parent="#br-accordion">
+                        <h1 class="panel-title">Border Radius</h1>
+                    </a>
+                </div>
+                <!-- Body Content -->
+                <div class="panel-collapse collapse" id='border-radius-body'>
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <!-- Sub Title -->
+                            <div class="panel-heading">
+                                <a href="#br-syntax" data-toggle="collapse" data-parent="br-title">
+                                    <h1 class="panel-title">Syntax</h1>
+                                </a>
+                            </div>
+                            <!-- Sub Body -->
+                            <div class="panel-collapse collapse" id='br-syntax'>
+                                <div class="panel-body">
+                                    <pre>
+                                    <code class="language-markup">[ &lt;length> | &lt;percentage> ]{1,4} 
+                                    [ / [ &lt;length> | &lt;percentage> ]{1,4}]?</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a href="#br-param" data-toggle="collapse">
+                                    <h1 class="panel-title">Parameters</h1>
+                                </a>
+                            </div>
+                            <!-- Sub Body -->
+                            <div class="panel-collapse collapse" id='br-param'>
+                                <div class="panel-body">
+                                    <pre>
+                                    <code class="language-markup">&lt;length> / &lt;percentage>: Defines radius (if no '/' used) or the vertical / horizontal sizes</pre></code>
+                                    <iframe src="http://localhost:3000/fon/1/edit?css,output" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CODE ABOVE -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Prism Script (For <pre> / <code> styling)-->
+    <script src="prism.js"></script>
+    <!-- livereload script-->
+    <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+</body>
+
+</html>
