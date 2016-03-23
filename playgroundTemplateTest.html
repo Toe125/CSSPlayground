@@ -28,12 +28,13 @@
 
 <body>
     <!-- CODE BELOW -->
+    <h1>hi</h1>
     <div class="container">
         <!-- Template -->
-        <div id="test-accordion" class="panel-group">
+        <div class="panel-group">
             <div class="panel panel-default">
                 <!-- Main Title -->
-                <div id="test-title" class="panel-heading">
+                <div class="panel-heading">
                     <a href="#test" data-toggle="collapse">
                         <h1 class="panel-title">Panel-Title</h1>
                     </a>
@@ -44,7 +45,7 @@
                     <div class="panel-body">
                         <div class="panel panel-default">
                             <!-- Sub Title -->
-                            <div id="test-syntax-title" class="panel-heading">
+                            <div class="panel-heading">
                                 <a href="#test-syntax" data-toggle="collapse">
                                     <h1 class="panel-title">Syntax</h1>
                                 </a>
@@ -59,7 +60,7 @@
                         <!-- Sub Content 2 -->
                         <div class="panel panel-default">
                             <!-- Sub Title -->
-                            <div id="test-parameter-title" class="panel-heading">
+                            <div class="panel-heading">
                                 <a href="#test-param" data-toggle="collapse">
                                     <h1 class="panel-title">Paramaters</h1>
                                 </a>
@@ -76,7 +77,7 @@
             </div>
         </div>
         <!-- Border Accordion -->
-        <div id="border-accordion" class="panel-group">
+        <div id="border-accordion" class="panel panel-group">
             <div class="panel panel-default">
                 <!-- Main Title -->
                 <div id="border-title" class="panel-heading">
@@ -300,7 +301,7 @@
             </div>
         </div>
         <!-- Background Accordion -->
-        <div id="bg-accordion" class="background panel-group">
+        <div id="bg-accordion" class="background panel panel-group">
             <!-- Panel Title -->
             <div class="panel panel-default">
                 <div class="panel-heading" id="bg-title">
@@ -404,7 +405,7 @@
             </div>
         </div>
         <!-- Font Accordion -->
-        <div id="font-accordion" class="Font panel-group">
+        <div id="font-accordion" class="Font panel panel-group">
             <!-- Panel Title -->
             <div class="panel panel-default">
                 <div class="panel-heading" id="font-title">
@@ -487,7 +488,7 @@
             </div>
         </div>
         <!-- List-style Accordion -->
-        <div id="list-style-accordion" class="list-style panel-group">
+        <div id="list-style-accordion" class="list-style panel panel-group">
             <!-- Panel Title -->
             <div class="panel panel-default">
                 <div class="panel-heading" id="list-title">
@@ -551,7 +552,7 @@
             </div>
         </div>
         <!-- Border-radius Accordion -->
-        <div id="br-accordion" class="panel-group">
+        <div id="br-accordion" class="panel panel-group">
             <div class="panel panel-default">
                 <!-- Main Title -->
                 <div class="panel-heading" id="br-title">
@@ -598,7 +599,7 @@
             </div>
         </div>
         <!-- Position Accordion -->
-        <div id="pos-accordion" class="panel-group">
+        <div id="pos-accordion" class="panel panel-group">
             <div class="panel panel-default">
                 <!-- Main Title -->
                 <div id="pos-title" class="panel-heading">
@@ -641,6 +642,55 @@
                                     <p><b>Stick:</b>Experimental</p>
                                     <p><b>Fixed:</b>Out of flow. Fixed to viewport.</p>
                                     <iframe src="http://localhost:3000/zar/1/edit?css,output" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Float Accordion -->
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <!-- Main Title -->
+                <div class="panel-heading">
+                    <a href="#float-body" data-toggle="collapse">
+                        <h1 class="panel-title">Float</h1>
+                    </a>
+                </div>
+                <!-- Body Content -->
+                <div id='float-body' class="panel-collapse collapse">
+                    <!-- Sub Content 1 -->
+                    <div class="panel-body">
+                        <p>Element is taken out of flow and placed along the left / right side of its container</p>
+                        <p>Ex: A left-floated box will shift to the left until its leftmost edge touches either the edge of the container, or the edge of another floated box</p>
+                        <p>If the box does not fit in the available horizontal space, the floated box will shift down</p>
+                        <div class="panel panel-default">
+                            <!-- Sub Title -->
+                            <div class="panel-heading">
+                                <a href="#float-syntax" data-toggle="collapse">
+                                    <h1 class="panel-title">Syntax</h1>
+                                </a>
+                            </div>
+                            <!-- Sub Body -->
+                            <div id='float-syntax' class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <pre><code class="language-markup">float: left | right | none | inline-start | inline-end</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sub Content 2 -->
+                        <div class="panel panel-default">
+                            <!-- Sub Title -->
+                            <div class="panel-heading">
+                                <a href="#float-param" data-toggle="collapse">
+                                    <h1 class="panel-title">Paramaters</h1>
+                                </a>
+                            </div>
+                            <!-- Sub Body -->
+                            <div id='float-param' class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <h1>Body 2</h1>
                                 </div>
                             </div>
                         </div>
