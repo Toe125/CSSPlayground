@@ -28,6 +28,7 @@
 
 <body>
     <!-- CODE BELOW -->
+    <h1>hi</h1>
     <div class="container">
         <!-- Template -->
         <div id="test-accordion" class="panel-group">
@@ -345,8 +346,8 @@
                                     <h4><b>bg-img</b>:<pre><code class="language-markup">none | &lt;image></code></pre></h4>
                                     <p>Note: url (' link ');</p>
                                     <hr>
-                                    <!-- Position -->
-                                    <h4><b>position</b><pre><code class="language-markup"> top | bottom | left | right | center [&lt;length> | &lt;percentage>]{1,2} (x,y? coords. (0,0) is top-left)</code></pre></h4>
+                                    <!-- Background-Position -->
+                                    <h4><b>bg-position</b><pre><code class="language-markup"> top | bottom | left | right | center [&lt;length> | &lt;percentage>]{1,2} (x,y? coords. (0,0) is top-left)</code></pre></h4>
                                     <p>Note: if only x is provided, y is set to'center'</p>
                                     <p>Can specify offset from pre-determined keyword, positive offset values are towards right and bottom</p>
                                     <p>Ex: top 50% bottom 50px = offset 'top' 50% to right, offset 'left' down 50px</p>
@@ -590,6 +591,57 @@
                                     <pre>
                                     <code class="language-markup">&lt;length> / &lt;percentage>: Defines radius (if no '/' used) or the vertical / horizontal sizes</pre></code>
                                     <iframe src="http://localhost:3000/fon/1/edit?css,output" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Position Accordion -->
+        <div id="pos-accordion" class="panel-group">
+            <div class="panel panel-default">
+                <!-- Main Title -->
+                <div id="pos-title" class="panel-heading">
+                    <a href="#pos-body" data-toggle="collapse">
+                        <h1 class="panel-title">Position</h1>
+                    </a>
+                </div>
+                <!-- Body Content -->
+                <div id='pos-body' class="panel-collapse collapse">
+                    <!-- Sub Content 1 -->
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <!-- Sub Title -->
+                            <div class="panel-heading">
+                                <a href="#pos-syntax" data-toggle="collapse">
+                                    <h1 class="panel-title">Syntax</h1>
+                                </a>
+                            </div>
+                            <!-- Sub Body -->
+                            <div id='pos-syntax' class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <pre><code class="language-markup">position: static | relative | absolute | sticky | fixed</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sub Content 2 -->
+                        <div class="panel panel-default">
+                            <!-- Sub Title -->
+                            <div class="panel-heading">
+                                <a href="#pos-param" data-toggle="collapse">
+                                    <h1 class="panel-title">Paramaters</h1>
+                                </a>
+                            </div>
+                            <!-- Sub Body -->
+                            <div id='pos-param' class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p><b>Static:</b>In flow. Top/Right/Bottom/Left and z-index properties do not apply</p>
+                                    <p><b>Relative:</b>In flow. Relative to static position.</p>
+                                    <p><b>Absolute:</b>Out of flow. Relative to <em>closest positioned ancestor</em>(non static), or containing block if no ancestor.</p>
+                                    <p><b>Stick:</b>Experimental</p>
+                                    <p><b>Fixed:</b>Out of flow. Fixed to viewport.</p>
+                                    <iframe src="http://localhost:3000/zar/1/edit?css,output" frameborder="0"></iframe>
                                 </div>
                             </div>
                         </div>
