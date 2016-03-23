@@ -34,12 +34,12 @@
             <div class="panel panel-default">
                 <!-- Main Title -->
                 <div class="panel-heading">
-                    <a href="#test" data-toggle="collapse">
-                        <h1 class="panel-title">Panel-Title</h1>
+                    <a href="#test-body" data-toggle="collapse">
+                        <h1 class="panel-title">test</h1>
                     </a>
                 </div>
                 <!-- Body Content -->
-                <div id='test' class="panel-collapse collapse">
+                <div id='test-body' class="panel-collapse collapse">
                     <!-- Sub Content 1 -->
                     <div class="panel-body">
                         <div class="panel panel-default">
@@ -690,6 +690,54 @@
                             <div id='float-param' class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <p>Recall a floated element is taken out of the flow. Therefore, a parent which contains only floated elements will collapse and have a heigh of 0. *Check to see if this is still an issue in 2016*</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Overflow Accordion -->
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <!-- Main Title -->
+                <div class="panel-heading">
+                    <a href="#overflow-body" data-toggle="collapse">
+                        <h1 class="panel-title">Overflow</h1>
+                    </a>
+                </div>
+                <!-- Body Content -->
+                <div id='overflow-body' class="panel-collapse collapse">
+                    <!-- Sub Content 1 -->
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <!-- Sub Title -->
+                            <div class="panel-heading">
+                                <a href="#overflow-syntax" data-toggle="collapse">
+                                    <h1 class="panel-title">Syntax</h1>
+                                </a>
+                            </div>
+                            <!-- Sub Body -->
+                            <div id='overflow-syntax' class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <pre><code class="language-markup">overflow: visible | hidden | scroll | auto</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sub Content 2 -->
+                        <div class="panel panel-default">
+                            <!-- Sub Title -->
+                            <div class="panel-heading">
+                                <a href="#overflow-param" data-toggle="collapse">
+                                    <h1 class="panel-title">Paramaters</h1>
+                                </a>
+                            </div>
+                            <!-- Sub Body -->
+                            <div id='overflow-param' class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>Scroll: Always show scrollbar</p>
+                                    <p>Auto: Only shows scrollbar if necessary</p>
+                                    <iframe src="http://localhost:3000/cuv/2/edit?css,output" frameborder="0"></iframe>
                                 </div>
                             </div>
                         </div>
