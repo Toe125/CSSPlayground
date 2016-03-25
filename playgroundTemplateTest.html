@@ -29,6 +29,9 @@
 <body>
     <!-- CODE BELOW -->
     <div class="container">
+    <h3>Box-model Notes</h3>
+    <p>width = content area (does not include padding + border width)</p>
+    <p>make width more intuitive by using box-sizing: border-box (includes padding and border width into account</p>
         <!-- Template -->
         <div class="panel-group">
             <div class="panel panel-default">
@@ -635,6 +638,7 @@
                             <!-- Sub Body -->
                             <div id='pos-param' class="panel-collapse collapse">
                                 <div class="panel-body">
+                                <b>Top/Right/Bottom/Left:</b><p>(Using Top as an example) For absolutely positioned elements (absolute and fixed): <p>Distance between top margin edge of element to top edge of its container</p></p>
                                     <p><b>Static:</b>In flow. Top/Right/Bottom/Left and z-index properties do not apply</p>
                                     <p><b>Relative:</b>In flow. Relative to static position.</p>
                                     <p><b>Absolute:</b>Out of flow. Relative to <em>closest positioned ancestor</em>(non static), or containing block if no ancestor.</p>
@@ -738,6 +742,53 @@
                                     <p>Scroll: Always show scrollbar</p>
                                     <p>Auto: Only shows scrollbar if necessary</p>
                                     <iframe src="http://localhost:3000/cuv/2/edit?css,output" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Display Accordion -->
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <!-- Main Title -->
+                <div class="panel-heading">
+                    <a href="#display-body" data-toggle="collapse">
+                        <h1 class="panel-title">display</h1>
+                    </a>
+                </div>
+                <!-- Body Content -->
+                <div id='display-body' class="panel-collapse collapse">
+                    <!-- Sub Content 1 -->
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <!-- Sub Title -->
+                            <div class="panel-heading">
+                                <a href="#display-syntax" data-toggle="collapse">
+                                    <h1 class="panel-title">Syntax</h1>
+                                </a>
+                            </div>
+                            <!-- Sub Body -->
+                            <div id='display-syntax' class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <pre><code class="language-markup">display: none | inline | block | list-item | inline-list-item | inline-block | inline-table | table | table-cell | table-column | table-column-group | table-footer-group | table-header-group | table-row | table-row-group | flex | inline-flex | grid | inline-grid | run-in | ruby | ruby-base | ruby-text | ruby-base-container | ruby-text-container | contents</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sub Content 2 -->
+                        <div class="panel panel-default">
+                            <!-- Sub Title -->
+                            <div class="panel-heading">
+                                <a href="#display-param" data-toggle="collapse">
+                                    <h1 class="panel-title">Paramaters</h1>
+                                </a>
+                            </div>
+                            <!-- Sub Body -->
+                            <div id='display-param' class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p><code><b>block:</b></code>Starts on new line and stretches horizontally as far as it's allowed.</p>
+                                    <p>Default value is usually 'block' or 'inline'</p>
                                 </div>
                             </div>
                         </div>
