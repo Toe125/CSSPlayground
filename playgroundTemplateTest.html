@@ -13,6 +13,10 @@
     <!-- CSS FILE LINK -->
     <link rel="stylesheet" href="prism.css">
     <style>
+    * body {
+        box-sizing: border-box;
+    }
+    
     iframe {
         width: 100%;
         height: 400px;
@@ -28,10 +32,11 @@
 
 <body>
     <!-- CODE BELOW -->
+    origin/master is "where master was over there last time I checked" master is "where master is over here based on what I have been doing"
     <div class="container">
         <h3>Box-model Notes</h3>
-        <p>width = content area (does not include padding + border width)</p>
-        <p>make width more intuitive by using box-sizing: border-box (includes padding and border width into account</p>
+        <p>noramlly width = content area (does not include padding + border width)</p>
+        <p>make width more intuitive by using <code>box-sizing</code>: border-box (includes padding and border width into account</p>
         <!-- Template -->
         <div class="panel-group">
             <div class="panel panel-default">
@@ -640,13 +645,13 @@
                                 <div class="panel-body">
                                     <b>Top/Right/Bottom/Left:</b>
                                     <p>
-                                    (Using Top as an example) 
-                                    <br><br>
-                                    For absolutely positioned elements (absolute and fixed):Distance between top margin edge of element to top edge of its container
-                                    <br><br> 
-                                    For relatively positioned elements: Distance relative to its normal position
-                                    <br><br>
-                                    If 'top' and 'bottom' are specified, and height is unspecified, auto, or 100%, both top and bottom distances will be respected. Otherwise, top takes precedence and bottom is ignored.
+                                        (Using Top as an example)
+                                        <br>
+                                        <br> For absolutely positioned elements (absolute and fixed):Distance between top margin edge of element to top edge of its container
+                                        <br>
+                                        <br> For relatively positioned elements: Distance relative to its normal position
+                                        <br>
+                                        <br> If 'top' and 'bottom' are specified, and height is unspecified, auto, or 100%, both top and bottom distances will be respected. Otherwise, top takes precedence and bottom is ignored.
                                     </p>
                                     <p><b>Static:</b>In flow. Top/Right/Bottom/Left and z-index properties do not apply</p>
                                     <p><b>Relative:</b>In flow. Relative to static position.</p>
@@ -706,19 +711,15 @@
                                     <p>Recall a floated element is taken out of the flow. Therefore, a parent which contains only floated elements will collapse and have a heigh of 0. *Check to see if this is still an issue in 2016*</p>
                                     <b>Clear:</b>
                                     <p>
-                                    Specifices whether an element can be next to floating elements that <em>precede</em> it or must be moved down (cleared) below them.
-                                    <br>
-                                    If applied to non-floating blocks:
-                                    <br>
-                                    Move the border edge of element down until it is below the margin edge of all relevant floats. (Also fix margin collapse)
-                                    <br>
-                                    If applied to floating blocks:
-                                    <br>
-                                    Move the margin edge of the element below the margin edge of all relevant floats
-                                    <br>
-                                    <code><b>left:</b>element is moved down to clear left floats</code>
-                                    <br>
-                                    <code><b>right:</b>element is moved down to clear right floats</code>
+                                        Specifices whether an element can be next to floating elements that <em>precede</em> it or must be moved down (cleared) below them.
+                                        <br> If applied to non-floating blocks:
+                                        <br> Move the border edge of element down until it is below the margin edge of all relevant floats. (Also fix margin collapse)
+                                        <br> If applied to floating blocks:
+                                        <br> Move the margin edge of the element below the margin edge of all relevant floats
+                                        <br>
+                                        <code><b>left:</b>element is moved down to clear left floats</code>
+                                        <br>
+                                        <code><b>right:</b>element is moved down to clear right floats</code>
                                     </p>
                                 </div>
                             </div>
@@ -815,6 +816,150 @@
                                 <div class="panel-body">
                                     <p><code><b>block:</b></code>Starts on new line and stretches horizontally as far as it's allowed.</p>
                                     <p>Default value is usually 'block' or 'inline'</p>
+                                    <hr>
+                                    <dl>
+                                        <dd>
+                                            <table class="standard-table">
+                                                <thead>
+                                                    <tr>
+                                                        <td class="header" colspan="1">Value set</td>
+                                                        <td class="header">Value</td>
+                                                        <td class="header">Description</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td rowspan="4" colspan="1">Basic values (CSS 1)</td>
+                                                        <td><code>none</code></td>
+                                                        <td>
+                                                            <p>Turns off the display of an element (it has no effect on layout); all descendant elements also have their display turned off. The document is rendered as though the element did not exist.</p>
+                                                            <p>To render an element box's dimensions, yet have its contents be invisible, see the <a href="/en-US/docs/Web/CSS/visibility" title="The visibility property can be used to hide an element while leaving the space where it would have been. It can also hide rows or columns of a table."><code>visibility</code></a> property.</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>inline</code></td>
+                                                        <td>The element generates one or more inline element boxes.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>block</code></td>
+                                                        <td>The element generates a block element box.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>list-item</code></td>
+                                                        <td>The element generates a block box for the content and a separate list-item inline box.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Extended values (CSS 2.1)</td>
+                                                        <td><code>inline-block</code></td>
+                                                        <td>The element generates a block element box that will be flowed with surrounding content as if it were a single inline box (behaving much like a replaced element would)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="10" colspan="1">Table model values (CSS 2.1)</td>
+                                                        <td><code>inline-table</code></td>
+                                                        <td>The<code> inline-table </code>value does not have a direct mapping in HTML. It behaves like a <a href="/en-US/docs/Web/HTML/Element/table" title="The HTML Table Element (<table>) represents data in two dimensions or more."><code>&lt;table&gt;</code></a> HTML element, but as an inline box, rather than a block-level box. Inside the table box is a block-level context.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>table</code></td>
+                                                        <td>These elements behave like&nbsp; <a href="/en-US/docs/Web/HTML/Element/table" title="The HTML Table Element (<table>) represents data in two dimensions or more."><code>&lt;table&gt;</code></a> HTML elements. It defines a block-level box.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>table-caption</code></td>
+                                                        <td>These elements behave like <a href="/en-US/docs/Web/HTML/Element/caption" title="The HTML <caption> Element (or HTML Table Caption Element) represents the title of a table. Though it is always the first descendant of a <table>, its styling, using CSS, may place it elsewhere, relative to the table."><code>&lt;caption&gt;</code></a> HTML elements.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>table-cell</code></td>
+                                                        <td>These elements behave like <a href="/en-US/docs/Web/HTML/Element/td" title="The Table cell HTML element (<td>) defines a cell of a table that contains data. It participates in the table model."><code>&lt;td&gt;</code></a> HTML elements.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>table-column</code></td>
+                                                        <td>These elements behave like&nbsp; <a href="/en-US/docs/Web/HTML/Element/col" title="The HTML Table Column Element (<col>) defines a column within a table and is used for defining common semantics on all common cells. It is generally found within a <colgroup> element."><code>&lt;col&gt;</code></a> HTML elements.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>table-column-group</code></td>
+                                                        <td>These elements behave like&nbsp; <a href="/en-US/docs/Web/HTML/Element/colgroup" title="The&nbsp;HTML Table Column Group Element&nbsp;(<colgroup>) defines a group of columns within a table."><code>&lt;colgroup&gt;</code></a> HTML elements.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>table-footer-group</code></td>
+                                                        <td>These elements behave like <a href="/en-US/docs/Web/HTML/Element/tfoot" title="The HTML Table Foot Element (<tfoot>) defines a set of rows summarizing the columns of the table."><code>&lt;tfoot&gt;</code></a> HTML elements.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>table-header-group</code></td>
+                                                        <td>These elements behave like <a href="/en-US/docs/Web/HTML/Element/thead" title="The HTML Table Head Element (<thead>) defines a set of rows defining the head of the columns of the table."><code>&lt;thead&gt;</code></a> HTML elements.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>table-row</code></td>
+                                                        <td>These elements behave like <a href="/en-US/docs/Web/HTML/Element/tr" title="The HTML element&nbsp;table row <tr>&nbsp;defines a row of cells in a table. Those can be a mix of <td> and <th> elements."><code>&lt;tr&gt;</code></a> HTML elements.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>table-row-group</code></td>
+                                                        <td>These elements behave like <a href="/en-US/docs/Web/HTML/Element/tbody" title="The HTML Table Body Element (<tbody>) defines one or more <tr> element data-rows to be the body of its parent <table> element (as long as no <tr> elements are immediate children of that table element.)&nbsp; In conjunction with a preceding <thead> and/or <tfoot> element, <tbody> provides additional semantic information for devices such as printers and displays. Of the parent table's child elements, <tbody> represents the content which, when longer than a page, will most likely differ for each page printed; while the content of <thead> and <tfoot> will be the same or similar for each page printed. For displays, <tbody> will enable separate scrolling of the <thead>, <tfoot>, and <caption> elements of the same parent <table> element.&nbsp; Note that unlike the <thead>, <tfoot>, and <caption> elements however, multiple&nbsp;<tbody> elements are permitted (if consecutive), allowing the data-rows in long tables to be divided into different sections, each separately formatted as needed."><code>&lt;tbody&gt;</code></a> HTML elements</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="1">CSS3 lists values (<a href="/en-US/docs/CSS/CSS3" title="CSS3">CSS3</a>)</td>
+                                                        <td><a href="https://drafts.csswg.org/css-lists/#valdef-display-inline-list-item" class="external external-icon">inline-list-item</a></td>
+                                                        <td>The inline-list-item display value makes the element a list item, with the effects described above. Additionally, the outside value of list-style-position computes to inside on this element. Otherwise, this display value is treated identically to inline.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2" colspan="1">Flexbox model values (<a href="/en-US/docs/CSS/CSS3" title="CSS3">CSS3</a>)</td>
+                                                        <td><code>flex</code></td>
+                                                        <td>The element behaves like a block element and lays out its content according to the flexbox model.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>inline-flex</code></td>
+                                                        <td>The element behaves like an inline element and lays out its content according to the flexbox model.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2" colspan="1">Grid box model values (<a href="/en-US/docs/CSS/CSS3" title="CSS3">CSS3</a>) <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></td>
+                                                        <td><code>grid</code></td>
+                                                        <td>
+                                                            <p>The element behaves like a block element and lays out its content according to the grid model.</p>
+                                                            <div class="note">As this is experimental, <a href="/en-US/docs/CSS/display#Browser_Compatibility" title="https://developer.mozilla.org/en/CSS/display#Browser_Compatibility">most browsers don't support it</a>. Especially pay attention that <code>-moz-grid</code> is not the prefixed version of this, but a <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=616605#c10" class="external link-https external-icon" title="https://bugzilla.mozilla.org/show_bug.cgi?id=616605#c10">XUL layout model</a> that must not be used on a Web site.</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>inline-grid</code></td>
+                                                        <td>The element behaves like an inline element and lays out its content according to the grid model.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="5" colspan="1">Ruby formatting model values (<a href="/en-US/docs/CSS/CSS3" title="CSS3">CSS3</a>)<span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></td>
+                                                        <td><code>ruby</code></td>
+                                                        <td>The element behaves like an inline element and lays out its content according to the ruby formatting model. It behaves like the corresponding <a href="/en-US/docs/Web/HTML/Element/ruby" title="The HTML <ruby> Element represents a ruby annotation. Ruby annotations are for showing pronunciation of East Asian characters."><code>&lt;ruby&gt;</code></a> HTML elements.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>ruby-base</code></td>
+                                                        <td>These elements behave like <a href="/en-US/docs/Web/HTML/Element/rb" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>&lt;rb&gt;</code></a> elements.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>ruby-text</code></td>
+                                                        <td>These elements behave like <a href="/en-US/docs/Web/HTML/Element/rt" title="The HTML <rt> Element embraces pronunciation of characters presented in a ruby annotations, which are used to describe the pronunciation of East Asian characters. This element is always used inside a <ruby> element."><code>&lt;rt&gt;</code></a> elements.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>ruby-base-container</code></td>
+                                                        <td>These elements behave like <a href="/en-US/docs/Web/HTML/Element/rbc" class="new" title="The documentation about this has not yet been written; please consider contributing!"><code>&lt;rbc&gt;</code></a> elements generated as anonymous boxes.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>ruby-text-container</code></td>
+                                                        <td>These elements behave like <a href="/en-US/docs/Web/HTML/Element/rtc" title="The HTML <rtc> Element embraces semantic annotations of characters presented in a ruby of <rb> elements used inside of <ruby> element. <rb> elements can have both pronunciation (<rt>) and semantic (<rtc>) annotations."><code>&lt;rtc&gt;</code></a> elements.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2" colspan="1">Experimental values <span title="This is an experimental API that should not be used in production code."><i class="icon-beaker"> </i></span></td>
+                                                        <td><code>run-in</code></td>
+                                                        <td>
+                                                            <ul>
+                                                                <li>If the run-in box contains a block box, same as block.</li>
+                                                                <li>If a block box follows the run-in box, the run-in box becomes the first inline box of the block box.</li>
+                                                                <li>If an inline box follows, the run-in box becomes a block box.</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><code>contents</code></td>
+                                                        <td>These elements don't produce a specific box by themselves. They are replaced by their pseudo-box and their child boxes.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </dd>
+                                    </dl>
                                 </div>
                             </div>
                         </div>
