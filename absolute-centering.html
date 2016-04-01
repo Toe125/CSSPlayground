@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Basic Bootstrap Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <!-- FONT AWESOME LIBRARY -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- CSS FILE LINK -->
+    <style>
+    h1 {
+        color: yellow;
+    }
+    
+    .parent {
+        min-height: 25em;
+        max-width: 35em;
+        min-width: 5em;
+        background-color: black;
+        position: relative;
+    }
+    
+    .child {
+        background-color: grey;
+        height: 50%;
+        margin: auto;
+        position: absolute;
+        width: 50%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        overflow: auto;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- CODE BELOW -->
+    <div class="container">
+        <div class="parent">
+            <div class="child">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores et voluptate nam. Aliquam consectetur molestias eum tempore, eos, laborum non voluptates, quis fugiat inventore, eligendi. Accusantium repellendus vitae velit error ad, hic nisi necessitatibus ea amet impedit delectus a, sint illum dolor quas voluptates fugit rerum porro nihil vel ut, deserunt odio eos cupiditate? Reiciendis similique nulla, excepturi modi ratione quibusdam tempora consectetur repellendus praesentium voluptatem reprehenderit iure non soluta dolorem perferendis aut in at saepe aspernatur optio. Assumenda quae praesentium et sint id officia iusto numquam, omnis accusamus sunt quasi reiciendis doloribus enim. Fuga nisi nulla cum, at dicta.</div>
+        </div>
+        <p><code>margin:auto</code>the margin-top and margin-bottom values are set to <b>0</b> when auto is used.</p>
+        <p>Recall using <code>trbl</code> on an absolute position element declares the distance between the child's margin and its parent's edge. As an example, using top:0 on a absolute position element means "I want there to be 0 distance away from the top margin of the child to the top edge of the parent (In other words, the top margin of the child is allowed to be as close to the top edge of the parent as possible)i". If we apply rbl=0 as well, that allows the child element to be placed anywhere within the parent because there is no restriction that says "This child element must be 'x' distance away from the parent's edge".
+            <br>
+            <b>tldr: </b>trbl sets new boundaries within the parent element that the child will position in.
+        </p>
+        <p>Margin:auto divides the available vertical and horizontal space evenly between its two opposite sides. (Ex: If there is a parent with height 100px, and a child element with height 50px. There is 50px of free space available. Therefore, a margin-top:25px and a margin-bottom:25px will be set). Because using trbl=0, the available vertical and horizontal space is respectively the height and width of the parent element. Therefore, dividing the space (after accounting for the space the child takes up) evenly, using margin:0 will center the child element within the parent.</p>
+        <p>Example of precedence: top over bottom, left / right precedence depends on if text is left-to-right or vice versa. See precedence by setting top= >0. Note that if top and bottom has a set value, then the bottom value is ignored (ex: top:0 bottom:50px, element is same as top/bot:0) </p>
+        <p>Note, the parent must be posiioned for this to work</p>
+    </div>
+    <!-- CODE ABOVE -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="PersonalProfile.js"></script>
+    <!-- livereload script-->
+    <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+</body>
+
+</html>

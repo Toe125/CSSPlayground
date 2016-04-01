@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Basic Bootstrap Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <!-- FONT AWESOME LIBRARY -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- CSS FILE LINK -->
+</head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.parent {
+    width: 600px;
+    height: 500px;
+    background: grey;
+}
+
+.child1 {
+    width: auto;
+    height: 100px;
+    background: green
+;
+    ;
+    padding: 25px;
+    border: 10px solid blue;
+    margin: 15px;
+}
+
+.child2 {
+    width: 100%;
+    height: 100px;
+    background: red;
+    padding: 25px;
+    border: 10px solid blue;
+    margin: 15px;
+}
+</style>
+
+<body>
+    <!-- CODE BELOW -->
+    <div>
+        <div class="parent">
+            <div class="child1 ">content + 5px padding + 1px border + 10px margin</div>
+            <div class="child2 ">content + 5px padding + 1px border + 10px margin</div>
+        </div>
+    </div>
+    <p><code>width:auto</code>takes into account the total width (ie: includes the padding/border/margin) in its calculation.</p>
+    <p><code>width:100%</code>sets the content box to 100% of its parent's width, and <b>does not</b> take into account the padding/border/margin.
+        <br>
+        <b>Note:</b>If <code>box-sizing:border-content</code> is used, the total width accounts for padding/border. In this case, only margin is not accounted for when using width:100%
+    </p>
+    <p>Open chrome dev tools and note that:
+        <ul>
+            <li>both childs are originally 600px wide (ie: same as width of its parent</li>
+            <li>when pbm is applied to child1, the content box is adjusted to account for the total width (ie: content + pbm = 600px)</li>
+            <li>when pbm is applied to child2, the content box is not adjusted, and the pbm are added onto the 600px content box (ie when no box-sizing: content(600px) + pbm = total width), resulting in overflow. With box-sizing (content+pb(600px) + m = total width) </li>
+        </ul>
+    </p>
+    <!-- CODE ABOVE -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js "></script>
+    <script src="PersonalProfile.js "></script>
+    <script id="__bs_script__">
+    //<![CDATA[
+    document.write("<script async src='http://HOST:3002/browser-sync/browser-sync-client.2.11.2.js'><\/script>".replace("HOST", location.hostname));
+    //]]>
+    </script>
+</body>
+
+</html>

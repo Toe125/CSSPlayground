@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Basic Bootstrap Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Optional Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <!-- FONT AWESOME LIBRARY -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- CSS FILE LINK -->
+</head>
+<style>
+h1 {
+    color: yellow;
+}
+
+.parent {
+    min-height: 25em;
+    max-width: 55em;
+    min-width: 5em;
+    background-color: black;
+    position: relative;
+}
+
+.child {
+    border: 1px solid red;
+    height: auto;
+    margin: auto;
+    position: absolute;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+</style>
+
+<body>
+    <!-- CODE BELOW -->
+    <div class="parent">
+        <img src="https://www.planwallpaper.com/static/images/Winter-Tiger-Wild-Cat-Images.jpg" alt="" class="child">
+    </div>
+    <p>absolute centering with image</p>
+    <!-- CODE ABOVE -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="PersonalProfile.js"></script>
+    <!-- livereload script-->
+    <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+</body>
+
+</html>
